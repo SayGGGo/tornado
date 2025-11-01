@@ -9,7 +9,7 @@
 > **Инфо** Данный проект создан как итоговый для учебного заведения. Я не собираюсь 
 > использовать его в продакшен.
 
-<h3>Содержание</h3>
+<h2>Содержание</h2>
 
 <ul>
     <li><a href="#install">Установка</a></li>
@@ -24,7 +24,7 @@
 
 <hr>
 <a name="install"></a>
-<h3>Установка</h3>
+<h2>Установка</h2>
 
 1. Скопируйте репозиторий:
 ``` commandline
@@ -69,7 +69,7 @@ python main.py
 
 <hr>
 <a name="func"></a>
-<h3>Функционал</h3>
+<h2>Функционал</h2>
 
 В разработке...
 
@@ -79,17 +79,17 @@ python main.py
 
 <hr>
 <a name="demo"></a>
-<h3>Демонстрация</h3>
+<h2>Демонстрация</h2>
 
-<img src="/for_readme/demo_screen1.png" alt="Screen 1">
-<img src="/for_readme/demo_screen2.png" alt="Screen 2">
-<img src="/for_readme/demo_screen3.png" alt="Screen 3">
+<img src="/for_readme/soon.png" alt="Screen 1">
+<img src="/for_readme/soon.png" alt="Screen 2">
+<img src="/for_readme/soon.png" alt="Screen 3">
 
 Протестировать самому: ```Временно недоступно```
 
 > **Внимание** Данный сайт создан только для демонстрации и не имеет backend'а.
 
-> **Совет** Если хотите использовать полный функционал, воспользуйтесь инструкцией выше.
+> **Совет** Если хотите использовать полный функционал, воспользуйтесь <a href="#install">инструкцией выше</a>.
 
 <br><br><br>
 
@@ -97,6 +97,6 @@ python main.py
 
 <hr>
 <a name="credits"></a>
-<h3>Создатели</h3>
+<h2>Создатели</h2>
 
 Андрей Сайгин ИИ-71 - [**GitHub**](https://github.com/SayGGGo).
