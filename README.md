@@ -8,7 +8,7 @@
 > **Инфо** Данный проект создан как итоговый для учебного заведения. Я не собираюсь 
 > использовать его в продакшен.
 
-<br>
+<br><br><br>
 
 <img src="/for_readme/install.png" alt="INSTALL">
 <hr>
@@ -50,24 +50,25 @@ python main.py
 
 8. Откройте http://localhost:2000 в браузере
 
-<br>
+<br><br><br>
 
 <img src="/for_readme/functional.png" alt="FUNCTIONAL">
 <hr>
 
 В разработке...
 
-<br>
+<br><br><br>
 
 <img src="/for_readme/demo.png" alt="DEMO">
 <hr>
 
 <h3>Протестируйте проект по ссылке: ```Временно недоступно```</h3>
+
 > **Внимание** Данный сайт создан только для демонстрации и не имеет backend'а.
 
 > **Совет** Если хотите использовать полный функционал, воспользуйтесь инструкцией выше.
 
-<br>
+<br><br><br>
 
 <img src="/for_readme/credits.png" alt="CREDITS">
 <hr>
