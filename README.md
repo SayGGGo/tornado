@@ -81,7 +81,7 @@ python app.py
 <a name="demo"></a>
 <h2>Демонстрация</h2>
 
-<img src="/for_readme/soon.png" alt="Screen 1">
+<img src="/for_readme/first_demo.png" alt="Screen 1">
 <img src="/for_readme/soon.png" alt="Screen 2">
 <img src="/for_readme/soon.png" alt="Screen 3">
 
