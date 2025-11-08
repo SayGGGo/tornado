@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} | Tornado</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <header class="header">
+        <button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Логотип Tornado">
+
+        <button>Доставка</button>
+        <button>Самовывоз</button>
+
+        <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="address_name">Кемерово, улица Пушкина, дом 9</span>
+            <span class="address_info">08:00 - 23:00 • Открыто • Скидка на самовывоз</span>
+        </div>
+
+        <button><i class="fa-solid fa-moon"></i></button>
+        <button><i class="fa-solid fa-user"></i> Профиль</button>
+        <button><i class="fa-solid fa-cart-shopping"></i> Корзина</button>
+    </header>
     {% block content %}{% endblock %}
 </body>
 </html>
