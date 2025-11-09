@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='icon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='icon/site.webmanifest') }}">
 </head>
 <body>
     <div class="preloader" id="preloader">
@@ -31,12 +35,6 @@
                 <button id="cart"><i class="fa-solid fa-cart-shopping"></i> Корзина</button>
             </div>
         </div>
-        <div class="dropdown-menu" id="dropdown-menu">
-            <a href="/"><i class="fa-solid fa-home"></i> Главная</a>
-            <a href="/actions"><i class="fa-solid fa-percent"></i> Акции</a>
-            <a href="/support"><i class="fa-solid fa-comment"></i> Поддержка</a>
-            <a href="https://github.com/SayGGGo/tornado/"><i class="fa-brands fa-github"></i> Github</a>
-        </div>
     </header>
 
     <main>
@@ -46,7 +44,6 @@
     </main>
 
     <div class="smooth-scrollbar"></div>
-
     <script>
         window.addEventListener('load', function() {
             setTimeout(function() {

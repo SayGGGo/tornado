@@ -2,4 +2,84 @@
 
 {% block content %}
 
+<div class="category-container">
+    <button class="btn42"><i class="fa-solid fa-search"></i></button>
+    <button class="btn42"><i class="fa-solid fa-sort"></i></button>
+    {% for i in category_names %}
+        <button class="category-item" data-category-id="{{ i | replace(' ', '-') | lower }}">{{ i }}</button>
+    {% endfor %}
+</div>
+
+<div class="menu-sections-container">
+    {% for category_name, products in categories.items() %}
+        <section id="{{ category_name | replace(' ', '-') | lower }}" class="menu-section">
+            <h2>{{ category_name }}</h2>
+            <div class="products-grid">
+                {% for product in products %}
+                    <div class="product-card">
+                        <img src="{{ product.image_url }}" alt="{{ product.name }}" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">{{ product.name }}</h3>
+                            <p class="product-description">{{ product.description }}</p>
+                            <div class="product-details">
+                                <span class="product-weight">{{ product.weight }}</span>
+                                <span class="product-rating">⭐ {{ product.rating }}</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="product-price">{{ product.price_rub | int }} руб</span>
+                                <button class="add-to-cart-btn">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+</div>
+
+<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+<script>
+    document.querySelectorAll('.category-item').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const targetId = e.target.getAttribute('data-category-id');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const topOffset = targetElement.offsetTop - headerHeight - 20;
+                window.scrollTo({
+                    top: topOffset,
+                    behavior: 'smooth'
+                });
+
+                document.querySelectorAll('.category-item').forEach(btn => btn.classList.remove('activate'));
+                e.target.classList.add('activate');
+            }
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const sections = document.querySelectorAll('.menu-section');
+        let currentCategory = null;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - headerHeight - 30;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                currentCategory = section.id;
+            }
+        });
+
+        document.querySelectorAll('.category-item').forEach(button => {
+            button.classList.remove('activate');
+            if (button.getAttribute('data-category-id') === currentCategory) {
+                button.classList.add('activate');
+            }
+        });
+    });
+</script>
+
 {% endblock %}
